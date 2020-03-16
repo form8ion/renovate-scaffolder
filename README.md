@@ -32,8 +32,16 @@ $ npm install @form8ion/renovate-scaffolder --save-prod
 
 ### Example
 
+#### Import
+
 ```javascript
-import renovateScaffolder from '@form8ion/renovate-scaffolder';
+import {scaffold} from '@form8ion/renovate-scaffolder';
+```
+
+#### Execute
+
+```javascript
+scaffold();
 ```
 
 ## Contributing
