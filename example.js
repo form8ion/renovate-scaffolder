@@ -7,7 +7,7 @@ import {scaffold} from './lib/index.cjs';
 stubbedFs();
 
 // #### Execute
-scaffold();
+scaffold({projectRoot: process.cwd()});
 
 // remark-usage-ignore-next
 stubbedFs.restore();
