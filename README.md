@@ -9,9 +9,9 @@ on a project
 
 ## Table of Contents
 
+* [Features](#features)
 * [Usage](#usage)
   * [Installation](#installation)
-  * [Features](#features)
   * [Example](#example)
     * [Import](#import)
     * [Execute](#execute)
@@ -20,6 +20,12 @@ on a project
 * [Contributing](#contributing)
   * [Dependencies](#dependencies)
   * [Verification](#verification)
+
+## Features
+
+* Creates the [config file](https://docs.renovatebot.com/configuration-options/)
+  for [Renovate](https://renovate.whitesourcesoftware.com/), extending an
+  appropriate [shareable config](https://docs.renovatebot.com/config-presets/#github-hosted-presets)
 
 ## Usage
 
@@ -34,12 +40,6 @@ on a project
 ```sh
 $ npm install @form8ion/renovate-scaffolder --save-prod
 ```
-
-### Features
-
-* Creates the [config file](https://docs.renovatebot.com/configuration-options/)
-  for [Renovate](https://renovate.whitesourcesoftware.com/), extending an
-  appropriate [shareable config](https://docs.renovatebot.com/config-presets/#github-hosted-presets)
 
 ### Example
 
