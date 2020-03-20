@@ -11,7 +11,12 @@ on a project
 
 * [Usage](#usage)
   * [Installation](#installation)
+  * [Features](#features)
   * [Example](#example)
+    * [Import](#import)
+    * [Execute](#execute)
+  * [API](#api)
+    * [`projectRoot` __string__ (_required_)](#projectroot-string-required)
 * [Contributing](#contributing)
   * [Dependencies](#dependencies)
   * [Verification](#verification)
@@ -30,11 +35,31 @@ on a project
 $ npm install @form8ion/renovate-scaffolder --save-prod
 ```
 
+### Features
+
+* Creates the [config file](https://docs.renovatebot.com/configuration-options/)
+  for [Renovate](https://renovate.whitesourcesoftware.com/), extending an
+  appropriate [shareable config](https://docs.renovatebot.com/config-presets/#github-hosted-presets)
+
 ### Example
 
+#### Import
+
 ```javascript
-import renovateScaffolder from '@form8ion/renovate-scaffolder';
+import {scaffold} from '@form8ion/renovate-scaffolder';
 ```
+
+#### Execute
+
+```javascript
+scaffold({projectRoot: process.cwd()});
+```
+
+### API
+
+#### `projectRoot` __string__ (_required_)
+
+path to the root of the project
 
 ## Contributing
 
