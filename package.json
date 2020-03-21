@@ -62,5 +62,8 @@
     "rollup-plugin-auto-external": "2.0.0",
     "sinon": "9.0.1",
     "travis-lint": "1.0.0"
+  },
+  "dependencies": {
+    "@travi/cli-messages": "^1.0.2"
   }
 }

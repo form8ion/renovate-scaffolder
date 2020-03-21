@@ -1,6 +1,9 @@
+import {info} from '@travi/cli-messages';
 import scaffoldConfig from './config';
 
 export default async function ({projectRoot}) {
+  info('Configuring Renovate');
+
   await scaffoldConfig({projectRoot});
 
   return {
