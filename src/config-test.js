@@ -22,7 +22,7 @@ suite('config', () => {
 
     assert.calledWith(
       fs.writeFile,
-      `${projectRoot}/renovate.json`,
+      `${projectRoot}/.renovaterc.json`,
       JSON.stringify({extends: ['github>form8ion/renovate-config']})
     );
   });
