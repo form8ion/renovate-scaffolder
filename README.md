@@ -3,9 +3,11 @@
 opinionated scaffolder for enabling [Renovate](https://renovate.whitesourcesoftware.com/)
 on a project
 
-<!-- status badges -->
+<!--status-badges start -->
 
-[![Build Status][ci-badge]][ci-link]
+[![Node CI Workflow Status][github-actions-ci-badge]][github-actions-ci-link]
+
+<!--status-badges end -->
 
 ## Table of Contents
 
@@ -29,11 +31,13 @@ on a project
 
 ## Usage
 
-<!-- consumer badges -->
+<!--consumer-badges start -->
 
 [![npm][npm-badge]][npm-link]
 [![Try @form8ion/renovate-scaffolder on RunKit][runkit-badge]][runkit-link]
 [![MIT license][license-badge]][license-link]
+
+<!--consumer-badges end -->
 
 ### Installation
 
@@ -63,12 +67,14 @@ path to the root of the project
 
 ## Contributing
 
-<!-- contribution badges -->
+<!--contribution-badges start -->
 
 [![Conventional Commits][commit-convention-badge]][commit-convention-link]
 [![Commitizen friendly][commitizen-badge]][commitizen-link]
 [![semantic-release][semantic-release-badge]][semantic-release-link]
 [![PRs Welcome][PRs-badge]][PRs-link]
+
+<!--contribution-badges end -->
 
 ### Dependencies
 
@@ -95,10 +101,6 @@ $ npm test
 
 [license-badge]: https://img.shields.io/github/license/form8ion/renovate-scaffolder.svg
 
-[ci-link]: https://travis-ci.com/form8ion/renovate-scaffolder
-
-[ci-badge]: https://img.shields.io/travis/com/form8ion/renovate-scaffolder/master.svg
-
 [commit-convention-link]: https://conventionalcommits.org
 
 [commit-convention-badge]: https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg
@@ -114,3 +116,7 @@ $ npm test
 [PRs-link]: http://makeapullrequest.com
 
 [PRs-badge]: https://img.shields.io/badge/PRs-welcome-brightgreen.svg
+
+[github-actions-ci-link]: https://github.com/form8ion/renovate-scaffolder/actions?query=workflow%3A%22Node.js+CI%22+branch%3Amaster
+
+[github-actions-ci-badge]: https://github.com/form8ion/renovate-scaffolder/workflows/Node.js%20CI/badge.svg
