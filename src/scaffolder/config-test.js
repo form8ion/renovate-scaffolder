@@ -23,7 +23,10 @@ suite('config', () => {
     assert.calledWith(
       fs.writeFile,
       `${projectRoot}/.renovaterc.json`,
-      JSON.stringify({extends: ['github>form8ion/renovate-config']})
+      JSON.stringify({
+        $schema: 'https://docs.renovatebot.com/renovate-schema.json',
+        extends: ['github>form8ion/renovate-config']
+      })
     );
   });
 });
