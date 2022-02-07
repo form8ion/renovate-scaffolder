@@ -50,17 +50,19 @@ $ npm install @form8ion/renovate-scaffolder --save-prod
 #### Import
 
 ```javascript
-import {lift, predicate, scaffold} from '@form8ion/renovate-scaffolder';
+import {lift, predicate as projectUsesRenovate, scaffold} from '@form8ion/renovate-scaffolder';
 ```
 
 #### Execute
 
 ```javascript
-scaffold({projectRoot: process.cwd()});
+(async () => {
+  await scaffold({projectRoot: process.cwd()});
 
-predicate({projectRoot: process.cwd()});
-
-lift();
+  if (await projectUsesRenovate({projectRoot: process.cwd()})) {
+    await lift();
+  }
+})();
 ```
 
 ### API
