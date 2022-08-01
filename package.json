@@ -64,6 +64,7 @@
     "sinon": "14.0.0"
   },
   "dependencies": {
+    "@form8ion/config-file": "^1.0.1",
     "@form8ion/core": "^2.0.0",
     "@travi/cli-messages": "^1.0.2"
   }

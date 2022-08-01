@@ -26,7 +26,7 @@ suite('config', () => {
       JSON.stringify({
         $schema: 'https://docs.renovatebot.com/renovate-schema.json',
         extends: ['github>form8ion/renovate-config']
-      })
+      }, null, 2)
     );
   });
 });
