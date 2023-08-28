@@ -1,9 +1,15 @@
+import deepmerge from 'deepmerge';
+
 import {afterEach, describe, expect, it, vi} from 'vitest';
 import any from '@travi/any';
+import {when} from 'jest-when';
 
 import scaffoldConfig from './config';
+import {scaffold as scaffoldBadges} from '../badges';
 import scaffold from './scaffolder';
 
+vi.mock('deepmerge');
+vi.mock('../badges');
 vi.mock('./config');
 
 describe('scaffolder', () => {
@@ -13,24 +19,22 @@ describe('scaffolder', () => {
 
   it('should scaffold renovate', async () => {
     const projectRoot = any.string();
-
-    expect(await scaffold({projectRoot})).toEqual({
-      badges: {
-        contribution: {
-          renovate: {
-            text: 'Renovate',
-            link: 'https://renovatebot.com',
-            img: 'https://img.shields.io/badge/renovate-enabled-brightgreen.svg?logo=renovatebot'
-          }
-        }
-      },
-      nextSteps: [
+    const badgesResults = any.simpleObject();
+    const mergedResults = any.simpleObject();
+    scaffoldBadges.mockReturnValue(badgesResults);
+    when(deepmerge.all)
+      .calledWith([
+        badgesResults,
         {
-          summary: 'Decide if the default renovate config is appropriate, '
-            + 'or if one of the :js-app or :js-package version are a better fit'
+          nextSteps: [{
+            summary: 'Decide if the default renovate config is appropriate, '
+              + 'or if one of the :js-app or :js-package version are a better fit'
+          }]
         }
-      ]
-    });
+      ])
+      .mockReturnValue(mergedResults);
+
+    expect(await scaffold({projectRoot})).toEqual(mergedResults);
     expect(scaffoldConfig).toHaveBeenCalledWith({projectRoot});
   });
 });

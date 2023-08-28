@@ -40,7 +40,8 @@
   "dependencies": {
     "@form8ion/config-file": "^1.0.1",
     "@form8ion/core": "^3.0.0",
-    "@travi/cli-messages": "^1.0.2"
+    "@travi/cli-messages": "^1.0.2",
+    "deepmerge": "^4.3.1"
   },
   "devDependencies": {
     "@babel/register": "7.22.5",
