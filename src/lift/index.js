@@ -1,2 +1,2 @@
-export {default as lift} from './lift';
-export {default as predicate} from './predicate';
+export {default as lift} from './lift.js';
+export {default as predicate} from './predicate.js';

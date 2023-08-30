@@ -1,2 +1,7 @@
 extends:
   - '@form8ion'
+
+rules:
+  import/extensions:
+    - error
+    - ignorePackages

@@ -38,6 +38,7 @@ on a project
 [![npm][npm-badge]][npm-link]
 [![Try @form8ion/renovate-scaffolder on RunKit][runkit-badge]][runkit-link]
 [![MIT license][license-badge]][license-link]
+![node][node-badge]
 
 <!--consumer-badges end -->
 
@@ -134,3 +135,5 @@ $ npm test
 [coverage-badge]: https://img.shields.io/codecov/c/github/form8ion/renovate-scaffolder?logo=codecov
 
 [slsa-badge]: https://slsa.dev/images/gh-badge-level2.svg
+
+[node-badge]: https://img.shields.io/node/v/@form8ion/renovate-scaffolder?logo=node.js
