@@ -82,6 +82,7 @@ path to the root of the project
 [![Commitizen friendly][commitizen-badge]][commitizen-link]
 [![semantic-release][semantic-release-badge]][semantic-release-link]
 [![PRs Welcome][PRs-badge]][PRs-link]
+[![Renovate][renovate-badge]][renovate-link]
 
 <!--contribution-badges end -->
 
@@ -137,3 +138,7 @@ $ npm test
 [slsa-badge]: https://slsa.dev/images/gh-badge-level2.svg
 
 [node-badge]: https://img.shields.io/node/v/@form8ion/renovate-scaffolder?logo=node.js
+
+[renovate-link]: https://renovatebot.com
+
+[renovate-badge]: https://img.shields.io/badge/renovate-enabled-brightgreen.svg?logo=renovatebot
