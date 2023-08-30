@@ -1,6 +1,6 @@
 import {describe, expect, it} from 'vitest';
 
-import scaffoldBadges from './scaffolder';
+import scaffoldBadges from './scaffolder.js';
 
 describe('badges scaffolder', () => {
   it('should define the renovate badge', () => {

@@ -3,7 +3,8 @@ import {fileExists} from '@form8ion/core';
 import {describe, vi, it, expect, afterEach} from 'vitest';
 import any from '@travi/any';
 import {when} from 'jest-when';
-import shouldBeLifted from './predicate';
+
+import shouldBeLifted from './predicate.js';
 
 vi.mock('@form8ion/core');
 

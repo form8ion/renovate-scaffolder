@@ -3,5 +3,5 @@ extends:
 
 rules:
   import/extensions:
-    - warn
+    - error
     - ignorePackages

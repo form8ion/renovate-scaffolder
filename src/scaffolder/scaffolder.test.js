@@ -4,9 +4,9 @@ import {afterEach, describe, expect, it, vi} from 'vitest';
 import any from '@travi/any';
 import {when} from 'jest-when';
 
-import scaffoldConfig from './config';
-import {scaffold as scaffoldBadges} from '../badges';
-import scaffold from './scaffolder';
+import scaffoldConfig from './config.js';
+import {scaffold as scaffoldBadges} from '../badges/index.js';
+import scaffold from './scaffolder.js';
 
 vi.mock('deepmerge');
 vi.mock('../badges');
