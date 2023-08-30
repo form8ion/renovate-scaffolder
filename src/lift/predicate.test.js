@@ -21,8 +21,16 @@ describe('lift predicate', () => {
     expect(await shouldBeLifted({projectRoot})).toBe(true);
   });
 
+  it('should lift the project if it has a legacy renovate config file', async () => {
+    when(fileExists).calledWith(`${projectRoot}/.renovaterc.json`).mockResolvedValue(false);
+    when(fileExists).calledWith(`${projectRoot}/renovate.json`).mockResolvedValue(true);
+
+    expect(await shouldBeLifted({projectRoot})).toBe(true);
+  });
+
   it('should not lift the project if it does not has a renovate config file', async () => {
     when(fileExists).calledWith(`${projectRoot}/.renovaterc.json`).mockResolvedValue(false);
+    when(fileExists).calledWith(`${projectRoot}/renovate.json`).mockResolvedValue(false);
 
     expect(await shouldBeLifted({projectRoot})).toBe(false);
   });
