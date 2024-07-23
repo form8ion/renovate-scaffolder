@@ -11,6 +11,6 @@ stubbedFs();
   await scaffold({projectRoot: process.cwd()});
 
   if (await projectUsesRenovate({projectRoot: process.cwd()})) {
-    await lift();
+    await lift({projectRoot: process.cwd()});
   }
 })();

@@ -63,7 +63,7 @@ import {lift, test as projectUsesRenovate, scaffold} from '@form8ion/renovate-sc
   await scaffold({projectRoot: process.cwd()});
 
   if (await projectUsesRenovate({projectRoot: process.cwd()})) {
-    await lift();
+    await lift({projectRoot: process.cwd()});
   }
 })();
 ```
