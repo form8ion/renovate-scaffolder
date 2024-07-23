@@ -2,7 +2,7 @@ import deepmerge from 'deepmerge';
 import {info} from '@travi/cli-messages';
 
 import {scaffold as scaffoldBadges} from '../badges/index.js';
-import scaffoldConfig from './config.js';
+import {scaffold as scaffoldConfig} from '../config/index.js';
 
 export default async function ({projectRoot}) {
   info('Configuring Renovate');
