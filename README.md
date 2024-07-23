@@ -53,7 +53,7 @@ $ npm install @form8ion/renovate-scaffolder --save-prod
 #### Import
 
 ```javascript
-import {lift, predicate as projectUsesRenovate, scaffold} from '@form8ion/renovate-scaffolder';
+import {lift, test as projectUsesRenovate, scaffold} from '@form8ion/renovate-scaffolder';
 ```
 
 #### Execute
