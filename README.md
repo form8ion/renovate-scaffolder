@@ -53,7 +53,7 @@ $ npm install @form8ion/renovate-scaffolder --save-prod
 #### Import
 
 ```javascript
-import {lift, predicate as projectUsesRenovate, scaffold} from '@form8ion/renovate-scaffolder';
+import {lift, test as projectUsesRenovate, scaffold} from '@form8ion/renovate-scaffolder';
 ```
 
 #### Execute
@@ -63,7 +63,7 @@ import {lift, predicate as projectUsesRenovate, scaffold} from '@form8ion/renova
   await scaffold({projectRoot: process.cwd()});
 
   if (await projectUsesRenovate({projectRoot: process.cwd()})) {
-    await lift();
+    await lift({projectRoot: process.cwd()});
   }
 })();
 ```
@@ -101,7 +101,7 @@ $ npm test
 
 [npm-link]: https://www.npmjs.com/package/@form8ion/renovate-scaffolder
 
-[npm-badge]: https://img.shields.io/npm/v/@form8ion/renovate-scaffolder.svg
+[npm-badge]: https://img.shields.io/npm/v/@form8ion/renovate-scaffolder?logo=npm
 
 [runkit-link]: https://npm.runkit.com/@form8ion/renovate-scaffolder
 
@@ -109,7 +109,7 @@ $ npm test
 
 [license-link]: LICENSE
 
-[license-badge]: https://img.shields.io/github/license/form8ion/renovate-scaffolder.svg
+[license-badge]: https://img.shields.io/github/license/form8ion/renovate-scaffolder.svg?logo=opensourceinitiative
 
 [commit-convention-link]: https://conventionalcommits.org
 
@@ -129,7 +129,7 @@ $ npm test
 
 [github-actions-ci-link]: https://github.com/form8ion/renovate-scaffolder/actions?query=workflow%3A%22Node.js+CI%22+branch%3Amaster
 
-[github-actions-ci-badge]: https://github.com/form8ion/renovate-scaffolder/workflows/Node.js%20CI/badge.svg
+[github-actions-ci-badge]: https://img.shields.io/github/actions/workflow/status/form8ion/renovate-scaffolder/node-ci.yml.svg?branch=master&logo=github
 
 [coverage-link]: https://codecov.io/github/form8ion/renovate-scaffolder
 

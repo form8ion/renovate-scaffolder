@@ -5,7 +5,7 @@
   "version": "0.0.0-semantically-released",
   "type": "module",
   "engines": {
-    "node": "^16.14 || >=18"
+    "node": "^18.17 || >=20.6.1"
   },
   "author": "Matt Travi <npm@travi.org> (https://matt.travi.org/)",
   "repository": "form8ion/renovate-scaffolder",
@@ -36,11 +36,13 @@
     "lint:engines": "ls-engines",
     "test:integration": "run-s 'test:integration:base -- --profile noWip'",
     "test:integration:base": "NODE_OPTIONS=--enable-source-maps DEBUG=any cucumber-js test/integration",
+    "pretest:integration:base": "npm run build",
     "test:integration:debug": "DEBUG=test run-s test:integration",
     "test:integration:wip": "run-s 'test:integration:base -- --profile wip'",
     "test:integration:wip:debug": "DEBUG=test run-s 'test:integration:wip'",
     "test:integration:focus": "run-s 'test:integration:base -- --profile focus'",
-    "lint:gherkin": "gherkin-lint --config=.gherkin-lintrc.json"
+    "lint:gherkin": "gherkin-lint --config=.gherkin-lintrc.json",
+    "lint:js:fix": "run-s 'lint:js -- --fix'"
   },
   "files": [
     "lib/"
@@ -49,14 +51,15 @@
     "access": "public",
     "provenance": true
   },
+  "packageManager": "npm@10.8.2+sha512.c7f0088c520a46596b85c6f8f1da943400199748a0f7ea8cb8df75469668dc26f6fb3ba26df87e2884a5ebe91557292d0f3db7d0929cdb4f14910c3032ac81fb",
   "dependencies": {
     "@form8ion/config-file": "^1.0.1",
-    "@form8ion/core": "^3.0.0",
+    "@form8ion/core": "^4.0.0",
     "@travi/cli-messages": "^1.0.2",
     "deepmerge": "^4.3.1"
   },
   "devDependencies": {
-    "@cucumber/cucumber": "9.6.0",
+    "@cucumber/cucumber": "10.8.0",
     "@form8ion/commitlint-config": "1.0.76",
     "@form8ion/eslint-config": "7.0.9",
     "@form8ion/eslint-config-cucumber": "1.4.1",
