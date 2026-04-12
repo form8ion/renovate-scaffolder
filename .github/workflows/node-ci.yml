@@ -54,5 +54,19 @@ jobs:
     uses: form8ion/.github/.github/workflows/release-package.yml@5028d2cbb2c868e7ce8d33cee7fe67ea50c14451 # master
     secrets:
       NPM_TOKEN: ${{ secrets.NPM_PUBLISH_TOKEN }}
+  workflow-result:
+    runs-on: ubuntu-latest
+    needs:
+      - verify
+      - verify-matrix
+      - release
+    if: ${{ !cancelled() }}
+    steps:
+      - name: All matrix versions passed
+        if: ${{ !(contains(needs.*.result, 'failure')) }}
+        run: exit 0
+      - name: Some matrix version failed
+        if: ${{ contains(needs.*.result, 'failure') }}
+        run: exit 1
 permissions:
   contents: read
