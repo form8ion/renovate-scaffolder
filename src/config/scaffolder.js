@@ -1,7 +1,7 @@
 import {write} from '@form8ion/config-file';
 import {fileTypes} from '@form8ion/core';
 
-export default async function ({projectRoot}) {
+export default async function scaffoldConfig({projectRoot}) {
   await write({
     name: 'renovate',
     format: fileTypes.JSON,

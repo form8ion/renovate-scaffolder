@@ -4,7 +4,7 @@ import {info} from '@travi/cli-messages';
 import {scaffold as scaffoldBadges} from '../badges/index.js';
 import {scaffold as scaffoldConfig} from '../config/index.js';
 
-export default async function ({projectRoot}) {
+export default async function scaffoldRenovate({projectRoot}) {
   info('Configuring Renovate');
 
   await scaffoldConfig({projectRoot});

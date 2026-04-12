@@ -1,6 +1,6 @@
 import {fileExists} from '@form8ion/core';
 
-export default async function ({projectRoot}) {
+export default async function renovateInUse({projectRoot}) {
   const [configExists, legacyConfigExists] = await Promise.all([
     fileExists(`${projectRoot}/.renovaterc.json`),
     fileExists(`${projectRoot}/renovate.json`)
