@@ -133,7 +133,7 @@ $ npm test
 
 [coverage-link]: https://codecov.io/github/form8ion/renovate-scaffolder
 
-[coverage-badge]: https://img.shields.io/codecov/c/github/form8ion/renovate-scaffolder?logo=codecov
+[coverage-badge]: https://img.shields.io/codecov/c/github/form8ion/renovate-scaffolder/master?logo=codecov
 
 [slsa-badge]: https://slsa.dev/images/gh-badge-level2.svg
 
