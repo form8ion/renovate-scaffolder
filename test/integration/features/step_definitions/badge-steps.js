@@ -7,7 +7,7 @@ Then('the renovate badge details are defined', async function () {
     {
       text: 'Renovate',
       link: 'https://renovatebot.com',
-      img: 'https://img.shields.io/badge/renovate-enabled-brightgreen.svg?logo=renovatebot'
+      img: 'https://img.shields.io/badge/renovate-enabled-brightgreen.svg?logo=renovate'
     }
   );
 });
