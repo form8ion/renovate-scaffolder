@@ -2,7 +2,7 @@ import deepmerge from 'deepmerge';
 
 import {afterEach, describe, expect, it, vi} from 'vitest';
 import any from '@travi/any';
-import {when} from 'jest-when';
+import {when} from 'vitest-when';
 
 import {scaffold as scaffoldConfig} from '../config/index.js';
 import {scaffold as scaffoldBadges} from '../badges/index.js';
@@ -32,7 +32,7 @@ describe('scaffolder', () => {
           }]
         }
       ])
-      .mockReturnValue(mergedResults);
+      .thenReturn(mergedResults);
 
     expect(await scaffold({projectRoot})).toEqual(mergedResults);
     expect(scaffoldConfig).toHaveBeenCalledWith({projectRoot});

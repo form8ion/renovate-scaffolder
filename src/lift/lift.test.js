@@ -1,7 +1,7 @@
 import deepmerge from 'deepmerge';
 
 import {afterEach, describe, expect, it, vi} from 'vitest';
-import {when} from 'jest-when';
+import {when} from 'vitest-when';
 import any from '@travi/any';
 
 import {scaffold as scaffoldBadges} from '../badges/index.js';
@@ -24,7 +24,7 @@ describe('lift', () => {
     scaffoldBadges.mockReturnValue(badgesResults);
     when(deepmerge.all)
       .calledWith([badgesResults, {branchesToVerify: ['renovate/**']}])
-      .mockReturnValue(mergedResults);
+      .thenReturn(mergedResults);
 
     expect(await lift({projectRoot})).toEqual(mergedResults);
 

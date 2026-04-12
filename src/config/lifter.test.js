@@ -2,7 +2,7 @@ import {promises as fs} from 'node:fs';
 import {fileExists} from '@form8ion/core';
 
 import any from '@travi/any';
-import {when} from 'jest-when';
+import {when} from 'vitest-when';
 import {afterEach, describe, expect, it, vi} from 'vitest';
 
 import liftConfig from './lifter.js';
@@ -18,7 +18,7 @@ describe('config lifter', () => {
   });
 
   it('should move legacy config to the modern filename', async () => {
-    when(fileExists).calledWith(`${projectRoot}/renovate.json`).mockResolvedValue(true);
+    when(fileExists).calledWith(`${projectRoot}/renovate.json`).thenResolve(true);
 
     await liftConfig({projectRoot});
 
@@ -26,7 +26,7 @@ describe('config lifter', () => {
   });
 
   it('should not attempt to move legacy config if none exists', async () => {
-    when(fileExists).calledWith(`${projectRoot}/renovate.json`).mockResolvedValue(false);
+    when(fileExists).calledWith(`${projectRoot}/renovate.json`).thenResolve(false);
 
     await liftConfig({projectRoot});
 
